@@ -16,13 +16,13 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/pages/control-flow/control-flow.component')
             },
             {
-                path: 'defer-options',
-                title: 'Defer Options',
+                path: 'defer-triggers',
+                title: 'Defer Triggers',
                 loadComponent: () => import('./dashboard/pages/defer-options/defer-options.component')
             },
             {
-                path: 'defer-options',
-                title: 'Defer Options',
+                path: 'deferrable-views',
+                title: 'Deferrable Views',
                 loadComponent: () => import('./dashboard/pages/defer-views/defer-views.component')
             },
             {
@@ -36,9 +36,14 @@ export const routes: Routes = [
                 loadComponent: () => import('./dashboard/pages/users/users.component')
             },
             {
-                path: 'view-transition',
-                title: 'View Transition',
-                loadComponent: () => import('./dashboard/pages/view-transition/view-transition.component')
+                path: 'view-transition-1',
+                title: 'View Transition 1',
+                loadComponent: () => import('./dashboard/pages/view-transition/view-transition1.component')
+            },
+            {
+                path: 'view-transition-2',
+                title: 'View Transition 2',
+                loadComponent: () => import('./dashboard/pages/view-transition/view-transition2.component')
             },
             {
                 path: '',

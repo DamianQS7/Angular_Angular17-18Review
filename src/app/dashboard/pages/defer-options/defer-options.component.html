@@ -1,1 +1,87 @@
-<p>defer-options works!</p>
+<shared-title title="Defer Triggers" />
+
+<section>
+    <h1 class="text-xl">On Interaction - With placeholder</h1>
+    <hr class="my-2">
+
+    @defer (on interaction) {
+        <shared-heavy-loader-fast cssClass="bg-green-300 h-20">
+            <span>On Interaction</span>
+        </shared-heavy-loader-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-400">
+            Click the div
+        </div>
+    }
+</section>
+
+<section>
+    <h1 class="text-xl mt-3">On Interaction - With parameter (no placeholder)</h1>
+    <hr class="my-2">
+
+    <button 
+        #btnInteraction
+        class="p-2 bg-blue-400 hover:bg-blue-600 transition-all rounded text-white my-2">
+        Click me!
+    </button>
+
+    @defer (on interaction(btnInteraction)) {
+        <shared-heavy-loader-fast cssClass="bg-green-300 h-20">
+            <span>On Interaction</span>
+        </shared-heavy-loader-fast>
+    } 
+</section>
+
+<section>
+    <h1 class="text-xl mt-3">On Hover</h1>
+    <hr class="my-2">
+
+    <button 
+        #btnInteraction2
+        class="p-2 bg-green-400 hover:bg-green-600 transition-all rounded text-white my-2">
+        Hover over me!
+    </button>
+
+    @defer (on hover(btnInteraction2)) {
+        <shared-heavy-loader-fast cssClass="bg-green-300 h-20">
+            <span>On Hover</span>
+        </shared-heavy-loader-fast>
+    } 
+</section>
+
+<section>
+    <h1 class="text-xl mt-3">On Immediate</h1>
+    <hr class="my-2">
+
+    @defer (on immediate) {
+        <shared-heavy-loader-fast cssClass="bg-yellow-300 h-20">
+            <span>On Immediate</span>
+        </shared-heavy-loader-fast>
+    } 
+</section>
+
+<section>
+    <h1 class="text-xl mt-3">On Timer</h1>
+    <hr class="my-2">
+
+    @defer (on timer(2000)) {
+        <shared-heavy-loader-fast cssClass="bg-red-300 h-20">
+            <span>On Timer</span>
+        </shared-heavy-loader-fast>
+    } 
+</section>
+
+<section>
+    <h1 class="text-xl mt-3">On Hover, Idle</h1>
+    <hr class="my-2">
+
+    @defer (on hover; prefetch on idle) {
+        <shared-heavy-loader-fast cssClass="bg-red-300 h-20">
+            <span>On Hover, Idle</span>
+        </shared-heavy-loader-fast>
+    } @placeholder {
+        <div class="w-full h-20 bg-purple-400">
+            Hover over the div
+        </div>
+    }
+</section>

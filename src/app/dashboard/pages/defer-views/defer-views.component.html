@@ -1,1 +1,27 @@
-<p>defer-views works!</p>
+<shared-title title="Deferrable Views" />
+<section class="grid grid-cols-1">
+    @defer() {
+        <shared-heavy-loader-fast cssClass="bg-green-500"/>
+    } @placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">
+            The app has been frozen!!
+        </p>
+    
+    }
+
+    @defer(on viewport) {
+        <shared-heavy-loader-fast cssClass="bg-purple-500"/>
+    } @placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">
+            The app has been frozen!!
+        </p>
+    }
+
+    @defer(on idle) {
+        <shared-heavy-loader-fast cssClass="bg-blue-500"/>
+    } @placeholder {
+        <p class="h-[600px] w-full bg-gradient-to-r from-gray-200 to-gray-400 animate-pulse">
+            The app has been frozen!!
+        </p>
+    }
+</section>
